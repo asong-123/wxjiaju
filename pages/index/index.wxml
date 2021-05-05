@@ -1,0 +1,48 @@
+<!-- <view class="wrap w100 flex flex-column align-items">
+  <view class="flex w100 space-around border-bottom">
+    <view class="col-3 text-center flex flex-column content-center border-right">
+      <view class="w100">温度</view>
+      <view class="w100">{{detailInfo.temperature}}</view>
+    </view>
+    <view class="col-3 text-center flex flex-column content-center border-right">
+      <view>光照</view>
+      <view>{{detailInfo.illumination}}</view>
+    </view>
+    <view class="col-3 text-center flex flex-column content-center border-right">
+      <view>烟雾</view>
+      <view>{{detailInfo.smoke}}</view>
+    </view>
+  </view>
+  <view class="flex w100 space-around border-bottom">
+    <view class="col-4 text-center border-right flex flex-column content-center">
+      <view>门</view>
+      <view>{{detailInfo.door}}</view>
+    </view>
+    <view class="col-4 text-center flex flex-column content-center border-right">
+      <view>灯</view>
+      <view>{{detailInfo.light}}</view>
+    </view>
+    <view class="col-4 text-center flex flex-column content-center border-right"> 
+      <view>风扇</view>
+      <view>{{detailInfo.fan}}</view>
+    </view>
+    <view class="col-4 text-center flex flex-column content-center border-right">
+      <view>蜂鸣器</view>
+      <view>{{detailInfo.buzzer}}</view>
+    </view>
+  </view>
+</view> -->
+<!-- 弹窗 -->
+<view wx:if="{{show}}" class="mask w100 h100">
+  <view class="pop  flex flex-column">
+    <view class="title text-center">请选择你的设备</view>
+    <scroll-view class="content  flex flex-column align-items space-around" scroll-x="{{true}}" scroll-y="{{true}}">
+      <block wx:for="{{equipInfo}}" wx:key="index" wx:for-item="item" wx:for-index="index">
+        <view class="equip-btn" bindtap="toDetail" data-index="{{item.name}}">{{item.name}}</view>
+      </block>
+    </scroll-view>
+    <navigator style="color: #1E90FF; text-align: center; " url="/pages/equipList/equipList" >
+      添加设备
+    </navigator>
+  </view>
+</view>

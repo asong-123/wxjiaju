@@ -1,0 +1,6 @@
+<!--pages/equipList/equipList.wxml-->
+<view>
+  <block wx:for="{{equipList}}" wx:key="index" wx:for-item="item">
+    <view>{{item.text}}</view>
+  </block>
+</view>

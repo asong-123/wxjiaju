@@ -1,0 +1,54 @@
+<!--pages/login/login.wxml-->
+<form class="wrap " bindsubmit="submit">
+  <view class="w100 h100 flex flex-column align-items space-around">
+    <view>
+      <view class="flex padding ">
+        <view style="margin-right:20rpx">账号</view>
+        <input class="border-bottom" name="user" type="text" bindinput="getUsername" value="{{form.user}}" />
+      </view>
+      <view class="flex padding">
+        <view style="margin-right:20rpx">密码</view>
+        <input class="border-bottom" name="password" type="text" value="{{form.password}}" password="{{true}}"
+          maxlength="6" />
+      </view>
+    </view>
+    <view>
+      <button wx:if="{{flag}}" class="btn" formType="submit">登录</button>
+      <button wx:else class="btn" formType="submit">注册</button>
+      <view wx:if="{{flag}}" class="text flex space-around">
+        <view bindtap="register">注册账户?</view>
+        <view>or</view>
+        <view bindtap="changePs">修改密码?</view>
+      </view>
+      <view wx:else class="text" bindtap="register">返回登录</view>
+    </view>
+  </view>
+</form>
+<view wx:if="{{showPop}}" class="mask">
+<form  bindsubmit="changeSubmit">
+  <view class="pop addpop flex flex-column">
+    <view class="title" style="text-align: center">修改密码</view>
+    <view style="padding: 0 20px;">
+      <view class="flex" style="padding: 10px 0;">
+        <view class="flex-1 text-right">账号：</view>
+        <input class="flex-2" name="user" placeholder="请输入你的账号"  />
+      </view>
+      <view class="flex" style="padding: 10px 0;">
+        <view class="flex-1 text-right">原密码：</view>
+        <input class="flex-2" password="{{true}}" name="password" maxlength="6" placeholder="请输入你的原密码"
+          />
+      </view>
+      <view class="flex" style="padding: 10px 0;">
+        <view class="flex-1 text-right">新密码：</view>
+        <input class="flex-2" name="new_password" password="{{true}}" maxlength="6" placeholder="请输入你的新密码" 
+         />
+      </view>
+    </view>
+    <view style="display:flex; justify-content: space-around;">
+      <button style=" padding: 20px;"  formType="submit">确定</button>
+      <button style=" padding: 20px;" bindtap="cancel">取消</button>
+    </view>
+  </view>
+</form>
+  
+</view>

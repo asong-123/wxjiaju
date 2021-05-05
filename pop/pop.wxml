@@ -1,0 +1,39 @@
+<!-- 弹窗 -->
+<view wx:if="{{show}}" class="mask">
+  <view class="pop  flex flex-column">
+    <view class="title" style="text-align: center">请选择你的设备</view>
+    <scroll-view class="content flex flex-column align-items space-around" scroll-x="{{true}}" scroll-y="{{true}}">
+      <checkbox-group style="display:flex;flex-direction:column;align-items: center; " bindchange="checkboxChange">
+        <label class="checkbox" wx:for="{{equipInfo}}" wx:key="index" wx:for-item="item" wx:for-index="{{index}}">
+          <text bindtap="toDetail" data-mac="{{item.mac}}" data-name="{{item.name}}">{{item.name}}</text>
+          <checkbox wx:if="{{checkBoxShow}}" value="{{item.mac}}" checked="{{item.checked}}" />
+        </label>
+      </checkbox-group>
+      <!-- <block wx:for="{{equipInfo}}" wx:key="index" wx:for-item="item" wx:for-index="index">
+        <view class="equip-btn" bindtap="toDetail" data-mac="{{item.MAC}}" data-name="{{item.name}}">{{item.name}}</view>
+      </block> -->
+    </scroll-view>
+    <view style="display: flex; justify-content: space-around; color: #1E90FF; text-align: center; ">
+      <view bindtap="addEquip">添加设备</view>
+      <view bindtap="deleteModel">
+        <blcok wx:if="{{!showDelte}}">
+          <text wx:if="{{!checkBoxShow}}">删除设备</text>
+          <text wx:else>取消删除</text>
+        </blcok>
+        <block wx:else><text bindtap="deleteEvent">删除</text></block>
+      </view>
+    </view>
+  </view>
+</view>
+<view wx:if="{{showAdd}}" class="mask">
+  <view class="pop addpop flex flex-column">
+    <view class="title" style="text-align: center">请输入您要添加的设备</view>
+    <view style="padding: 0 20px;">
+      <input auto-focus placeholder="请输入您的设备MAC地址" value="{{value}}" bindinput="getInput" />
+    </view>
+    <view style="display:flex;  justify-content: space-around;">
+      <view style="padding: 20px;" bindtap="confirm">确定</view>
+      <view style="padding: 20px;" bindtap="cancel">取消</view>
+    </view>
+  </view>
+</view>

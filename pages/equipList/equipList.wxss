@@ -1,0 +1,4 @@
+/* pages/equipList/equipList.wxss */
+navigator-hover{
+  color: #1E90FF
+}

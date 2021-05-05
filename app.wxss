@@ -1,0 +1,65 @@
+/**app.wxss**/
+page{
+  height: 100%;
+}
+.padding{
+  padding: 20rpx;
+}
+.w100{
+  width: 100%;
+}
+
+.h100{
+  height: 100%;
+}
+.wrap {
+  height: 100%;
+  box-sizing: border-box;
+} 
+.flex{
+  display: flex;
+}
+
+.text-right{
+  text-align: right;
+}
+
+.content-center{
+  justify-content: center;
+}
+
+.flex-column{
+  flex-direction: column;
+}
+.text-center{
+  text-align: center;
+}
+.align-items{
+  align-items: center;
+}
+.space-around{
+  justify-content: space-around;
+}
+
+.space-between{
+  justify-content: space-between;
+}
+
+.yin{
+  background: #191970
+}
+.qing{
+  background: #23b7e5;
+}
+.yun{
+  background:  	#5F9EA0;
+}
+.yu,.lei{
+  background: #19363f
+}
+
+.shachen{
+  background: #FFDEAD
+}
+
+

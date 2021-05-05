@@ -1,0 +1,53 @@
+
+.wrap{
+  position: absolute;
+}
+.mask{
+  position: absolute;
+  background-color: rgba(0,0,0,0.5);
+}
+.pop{
+  background: #ffffff;
+  width: 80%;
+  height: 700rpx;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 10%;
+}
+
+.title{
+  padding: 40rpx;
+}
+.content{
+  height: 450rpx;
+  margin-bottom: 20rpx;
+}
+
+.col-3{
+  width: 33.33%;
+  height: 200rpx;
+}
+
+.col-4{
+  height: 200rpx;
+  width: 25%;
+}
+
+.equip-btn{
+  width: 100%;
+  padding: 20rpx ;
+  text-align: center;
+  box-sizing: border-box;
+}
+.border-right{
+  border-right: 1rpx solid #eee;
+  
+}
+.border-bottom{
+  border-bottom: 1rpx solid #eee;
+}
+

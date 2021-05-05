@@ -1,0 +1,81 @@
+/* pages/login/login.wxss */
+.btn{
+  width: 480rpx;
+  line-height: 50rpx;
+  color: #ffffff;
+  background-color: cornflowerblue;
+}
+
+.text{
+  margin-top: 10rpx;
+  color: #1E90FF;
+}
+
+.border-bottom{
+  border-bottom: 1rpx solid #eee;
+}
+
+.mask{
+  top: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 9999;
+  overflow: hidden;
+}
+
+.pop{
+  background: #ffffff;
+  width: 80%;
+  height: 500rpx;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 20px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.title{
+  padding: 40rpx;
+}
+
+.content{
+  height: 450rpx;
+  margin-bottom: 20rpx;
+}
+
+.col-3{
+  width: 33.33%;
+  height: 200rpx;
+}
+
+.col-4{
+  height: 200rpx;
+  width: 25%;
+}
+
+.equip-btn{
+  width: 100%;
+  padding: 20rpx ;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.border-right{
+  border-right: 1rpx solid #eee;
+  
+}
+
+.flex-1{
+  flex: 1;
+}
+
+.flex-2{
+  flex: 2;
+}
+
